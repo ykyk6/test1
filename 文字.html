@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = " Hello World!         ";
+      // .trim() 移除文字前後空白
+      str = str.trim();
+      console.log(str);
+      // .toUpperCase() 文字轉大寫
+      str = str.toUpperCase();
+      console.log(str);
+      // .toLowerCase() 文字轉小寫
+      str = str.toLowerCase();
+      console.log(str);
+
+      let address = "新北市泰山區貴子里致遠新村55之1號";
+      // .includes(文字) 是否包含指定文字
+      let isTaishan1 = address.includes("泰山");
+      console.log(isTaishan1);
+      // .match(正則表達式) 是否符合正則表達式 regex
+      // 回來的結果是陣列
+      let isTaishan2 = address.match(/泰山/g);
+      console.log(isTaishan2);
+      // .indexOf(文字, 開始文字) 從開始文字後找第幾個字符合
+      // 開始文字不放的話就是從第一個字
+      let isTaishan3 = address.indexOf("泰山");
+      console.log(isTaishan3);
+
+      let text = "吃葡萄不吐葡萄皮";
+      // .replace(搜尋文字, 取代文字)
+      // 取代符合的第一個結果
+      let replaced = text.replace("葡萄", "香蕉");
+      console.log(replaced);
+      // .replace(正則表達式, 取代文字)
+      // 取代符合正則表達式的結果
+      let replaced2 = text.replace(/葡萄/g, "香蕉");
+      console.log(replaced2);
+
+      let numbers = "0123456789";
+      // .substr(開始位置, 長度)
+      // 包含開始位置
+      let cut = numbers.substr(0, 5);
+      console.log(cut);
+      // .substring(開始位置, 結尾位置)
+      // 包含開始位置，不包含結尾位置
+      let cut2 = numbers.substring(3, 7);
+      console.log(cut2);
+      // .slice(開始位置, 結尾位置)
+      // 可以放負數代表倒數
+      // 結尾位置可以不放，代表到最底
+      let cut3 = numbers.slice(-5, -2);
+      console.log(cut3);
+
+      // 當把文字用 parseInt 或 parseFloat 時，會得到 NaN
+      // (NaN === NaN) 判斷結果會是 false
+      // 所以要用 isNaN() 判斷
+      let notNumber = "abc";
+      let nan = parseInt(notNumber);
+      console.log(isNaN(nan));
+
+      let alphabet = "a;b;c;d;e;f;g";
+      // .split(分割文字)
+      // 將文字分割成陣列
+      let array = alphabet.split(";");
+      console.log(array);
+
+      // 練習
+      let input1 = parseInt(prompt("數字1"));
+      let input2 = parseInt(prompt("數字2"));
+      let sum = input1 + input2;
+      let result = isNaN(sum) ? "不是數字" : sum;
+      alert(result);
+    </script>
+  </body>
+</html>
