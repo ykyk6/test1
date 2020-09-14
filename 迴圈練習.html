@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const myfunc = (n, m) => {
+      let sum = 0
+      let times = 0
+      while(sum <= m) {
+        sum += n + times
+        times++
+      }
+      return times
+    }
+
+    console.log(myfunc(1, 5)) // 輸出 3
+    console.log(myfunc(5, 10)) // 輸出 2
+    console.log(myfunc(100, 1000)) // 輸出 10
+  </script>
+</body>
+</html>
